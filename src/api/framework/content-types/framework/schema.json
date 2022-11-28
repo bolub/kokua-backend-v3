@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "frameworks",
+  "info": {
+    "singularName": "framework",
+    "pluralName": "frameworks",
+    "displayName": "Framework",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "resources": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::resource.resource"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name"
+    },
+    "logourl": {
+      "type": "string",
+      "required": true
+    }
+  }
+}
